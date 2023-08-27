@@ -44,7 +44,7 @@ body {
   position: absolute;
   left: 0;
   bottom: -8px;
-  width: 137px;
+  width: 65px;
   height: 3px;
   background: linear-gradient(
     90deg,
@@ -157,7 +157,10 @@ body {
 
 .error {
   color: red;
-  font-size: 1.1em;
+  font-size: 0.9em;
   margin-bottom: 20px;
   margin-top: 0;
+  position: absolute;
+  top: -10px;
+  z-index: 1;
 }

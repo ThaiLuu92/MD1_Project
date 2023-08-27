@@ -26,7 +26,7 @@ passwordShowHiden.forEach((eyeIcon) => {
 // Tạo database chứa thông tin đăng kí
 
 // B1: lấy thông tin trên các ô input
-const formElement = document.querySelector("form");
+const formRegisterElement = document.querySelector("#form-register");
 const addUserName = document.getElementById("input-user");
 const addEmail = document.getElementById("input-email");
 const addPassword = document.getElementById("input-password");
@@ -34,7 +34,7 @@ const addRepeatPassword = document.getElementById("input-repeat-password");
 
 
 
-formElement.addEventListener("submit", (e) => {
+formRegisterElement.addEventListener("sumbit", (e) => {
   // Chặn action của e
   e.preventDefault();
 
@@ -73,7 +73,7 @@ formElement.addEventListener("submit", (e) => {
     error.isError = true;
     error.msgEmail =
       "Email đã tồn tại, vui lòng đăng nhập hoặc đăng ký email khác";
-    console.log(1111, error);
+   
     renderError(error);
   }
 });
