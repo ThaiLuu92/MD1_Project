@@ -2,10 +2,13 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 a {
   text-decoration: none;
+}
+ul {
+  margin-bottom: 0;
 }
 
 li {
@@ -13,15 +16,15 @@ li {
 }
 .btn {
   border-radius: 5px;
-  padding: 10px 40px;
-  font-size: 18px;
+  padding: 10px 32px;
+  font-weight: 700;
 }
 
 /* CSS HEADER */
 header {
   display: flex;
   flex-direction: column;
- 
+  border-bottom: 1px solid rgb(200, 196, 196);
 }
 
 /* CSS HEADER TOP */
@@ -30,30 +33,33 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #16254c;
+  background-color: #1474fc;
   color: white;
   align-items: center;
-  padding: 0 100px;
+  padding: 0 50px;
+  
 }
 .header-top > * {
   display: flex;
   align-items: center;
   gap: 10px;
+ 
 }
 
 /* CSS HEADER TOP RIGHT */
 .header-top-right {
   padding: 10px;
- 
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .search {
-  background-color: #455170;
+  background-color: #1f62c0;
   border-radius: 5px;
   padding: 5px;
 }
 #inp-search {
-  background-color: #455170;
+  background-color: #1f62c0;
   border: none;
   border-radius: 5px;
   padding: 5px;
@@ -72,19 +78,27 @@ header {
   border: none;
   outline: none;
   color: white;
+  flex-wrap: nowrap;
+  
 }
 
 #btn-login {
-  background-color: #16254c;
+  background-color: #1474fc;
   border: 1px solid white;
   outline: none;
   color: white;
+  flex-wrap: nowrap;
 }
 
 /* CSS HEADER TOP LEFT */
+.header-top-left {
+  display: flex;
+  
+}
 
 .header-top-left li * {
   color: white;
+  align-items: center;
 }
 
 .header-top-left li i {
@@ -100,9 +114,382 @@ header {
   background-color: white;
   color: white;
   align-items: center;
-  padding: 0 100px;
+  padding: 0 50px;
 }
 
-.header-bottom-left {
+.header-bottom .header-container-right {
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  gap: 25px;
+  
+}
+
+.header-container-right > * {
+  color: #455170;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+/* CSS WATCHWORD*/
+
+.watchword-content {
+  padding: 50px 0;
+}
+
+.watchword-content > h1 {
+  font-size: 84px;
+  max-width: 700px;
+  font-weight: 900;
+}
+
+.watchword-content > p {
+  font-size: 25px;
+  max-width: 700px;
+  font-weight: 400;
+}
+
+#btn-watchword-res {
+  border: 5px solid #1474fc;;
+  outline: none;
+  background-color: #1474fc;
+  color: white;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+#btn-watchword-test {
+  border:5px solid #1474fc;
+  outline: none;
+  background-color: white;
+  color: #1474fc;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.watchword-img{
+  display: flex;
+  align-items: center;
+}
+
+#watchword-img-cr {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background-image: url(/images/watchword-img.png);
+  background-size: cover;
+  background-position: center;
+}
+
+/* CSS COURSE SELF LEARNING */
+
+.course-self-learning {
+  background-color: #F5F5F5;
+ 
+  padding: 50px 0;
+}
+
+#csl{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+#course-sl-img {
+  flex: 0.35;
+  width: 350px;
+  height: 350px;
+  background-image: url(/images/watchword-img.png);
+  background-size: cover;
+  background-position: center;
+  
+}
+#course-sl-content {
+  margin-left: 50px;
+  flex: 0.65;
+  
+}
+
+.course-japan-title
+{
+  font-size: 50px;
+}
+.course-japan-sub {
+  font-size: 25px;
+  font-weight: 600;
+}
+#course-japan-title01{
+  color:#0D6EFD ;
+}
+
+/* CSS lại nút button của bootrap */
+.btn-csl {
+  padding: 10px 32px;
+  font-weight: 700;
+}
+
+.btn-csl-jlpt {
+  padding: 8px;
+}
+
+/* CSS COURSE TEACHER LEARNING */
+.course-teacher-learning {
+  padding: 50px 0;
+}
+
+#ctl{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+#course-tl-content > * {
+  margin-bottom: 20px;
+}
+
+#course-tl-img {
+  flex: 0.35;
+  width: 350px;
+  height: 350px;
+  background-image: url(/images/watchword-img.png);
+  background-size: cover;
+  background-position: center;
+  
+}
+#course-tl-content {
+  flex: 0.65;
+}
+#course-japan-title02{
+  color:#FFCA2C ;
+}
+
+#btn-group-ctl {
+  margin-top: 50px;
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#btn-group-ctl > button {
+  padding: 10px 32px;
+  font-weight: 700;
+}
+
+
+/* CSS COURSE OFFLINE LEARNING */
+.course-offline-learning {
+  background-color: #F5F5F5;
+  padding: 50px 0;
+}
+#cofl{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+#course-cofl-content > * {
+  margin-bottom: 20px;
+}
+
+#course-cofl-img {
+  flex: 0.35;
+  width: 350px;
+  height: 350px;
+  background-image: url(/images/watchword-img.png);
+  background-size: cover;
+  background-position: center;
+  
+}
+#course-cofl-content {
+  margin-left: 50px;
+  flex: 0.65;
+}
+#course-japan-title03 {
+  color: #157347;
+}
+#btn-group-cofl {
+  margin-top: 50px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#btn-group-cofl > button {
+  padding: 10px 32px;
+  font-weight: 700;
+}
+
+
+/* CSS COURSE LIBARY LEARNING */
+
+.course-libary {
+  padding: 50px 0;
+}
+
+#cb{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+#course-cb-content > * {
+  margin-bottom: 20px;
+}
+
+#course-cb-img {
+  flex: 0.35;
+  width: 350px;
+  height: 350px;
+  background-image: url(/images/watchword-img.png);
+  background-size: cover;
+  background-position: center;
+  
+}
+
+#course-cb-content {
+  flex: 0.65;
+}
+
+#course-japan-title04{
+  color:#0DCAF0 ;
+}
+
+#btn-group-cb {
+  margin-top: 50px;
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#btn-group-cb > button {
+  padding: 10px 32px;
+  font-weight: 700;
+}
+
+/* CSS LIST TEACHERS CARDS  */
+.teachers-cards{
+  padding: 50px 0;
+  background-color: green;
+  
+}
+
+.teachers-cards-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+} 
+.slide-container {
+  width: 100%;
+  background-color: grey;
+  padding: 40px 0;
+}
+.slide-content {
+  margin: 0 40px;
+}
+.cards-lists {
+  width: 320px;
+  border-radius: 25px;
+  background-color: #FFF;
+}
+.images-content,
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
 
 }
+
+.images-content {
+  position: relative;
+  row-gap: 5px;
+  padding: 25px 0;
+}
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0D6EFD;
+  border-radius: 25px 25px 0 25px;
+
+}
+
+.overlay::before,
+.overlay::after{
+  content: '';
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  right: 0;
+  bottom: -40px;
+  background-color: #0D6EFD;
+
+}
+
+.overlay::after {
+  border-radius: 0 25px 0 0;
+  background-color: #FFF;
+}
+
+.card-image {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: #FFF;
+  padding: 3px;
+}
+
+.card-image .card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #4070f4;
+}
+.card-teacher-name {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+.card-description {
+  font-size: 14px;
+  color: #707070;
+  text-align: center;
+}
+.card-button {
+  border: none;
+  font-size: 16px;
+  color: #FFF;
+  padding: 8px 16px;
+  background-color: #1474fc;
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+}
+.card-button:hover {
+  background-color: #0D6EFD;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

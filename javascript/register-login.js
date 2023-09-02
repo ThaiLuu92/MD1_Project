@@ -21,7 +21,7 @@ passwordShowHiden.forEach((eyeIcon) => {
   });
 });
 
-// JS phần đăng kí
+// JS phần ĐĂNG KÝ
 
 // Tạo database chứa thông tin đăng kí
 
@@ -32,9 +32,7 @@ const addEmail = document.getElementById("input-email");
 const addPassword = document.getElementById("input-password");
 const addRepeatPassword = document.getElementById("input-repeat-password");
 
-
-
-formRegisterElement.addEventListener("sumbit", (e) => {
+formRegisterElement.addEventListener("submit", (e) => {
   // Chặn action của e
   e.preventDefault();
 
@@ -44,7 +42,7 @@ formRegisterElement.addEventListener("sumbit", (e) => {
   // B2:  Check validator
   const error = checkError(user); // { } --> chứa thông tin lỗi
   renderError(error); // hiển thị loại
- 
+
   if (error.isError) {
     return;
   }
@@ -73,12 +71,10 @@ formRegisterElement.addEventListener("sumbit", (e) => {
     error.isError = true;
     error.msgEmail =
       "Email đã tồn tại, vui lòng đăng nhập hoặc đăng ký email khác";
-   
+
     renderError(error);
   }
 });
-
-
 
 // lấy thông tin người dùng
 
@@ -106,12 +102,15 @@ function checkError(user) {
   }
   if (user.password !== user.repeatPassword) {
     error.isError = true;
-    error.msgRepeatPassword =
-      "Mật khẩu không trùng khớp, vui lòng nhập lại";
+    error.msgRepeatPassword = "Mật khẩu không trùng khớp, vui lòng nhập lại";
   }
   if (!user.password) {
     error.isError = true;
     error.msgPassword = "Mật khẩu không được để trống";
+  }
+  if (!user.repeatPassword) {
+    error.isError = true;
+    error.msgRepeatPassword = "Nhập lại mật khẩu không được để trống";
   }
 
   if (!user.email.match(validRegex)) {
@@ -130,8 +129,19 @@ function renderError(error) {
   const errorRepeatPasswordElement = document.querySelector(
     "#error-repeat-password"
   );
-  errorUserNameElement.textContent = error.msgUserName
+  errorUserNameElement.textContent = error.msgUserName;
   errorEmailElement.textContent = error.msgEmail;
   errorPasswordElement.textContent = error.msgPassword;
   errorRepeatPasswordElement.textContent = error.msgRepeatPassword;
 }
+
+// JS phần ĐĂNG NHẬP
+
+const formLoginElement = document.querySelector("#form-login");
+const loginEmail = document.getElementById("inplogin-email");
+const loginPassword = document.getElementById("inplogin-password");
+
+formLoginElement.addEventListener("submit", (e) => {
+  // Chặn action của e
+  e.preventDefault();
+});
