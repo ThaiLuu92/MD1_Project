@@ -1,0 +1,112 @@
+/* CSS CHUNG */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+  }
+  a {
+    text-decoration: none;
+  }
+  P {
+    margin: 0;
+  }
+  ul {
+    margin-bottom: 0;
+  }
+  
+  li {
+    list-style-type: none;
+  }
+
+  /* CSS MAIN USER LEFT */
+  .main-center {
+    padding: 50px 0;
+    display: flex;
+  }
+  .user-avatar-container {
+    width: 200px;
+    height: 200px;
+    border-radius: 6px;
+    object-fit: cover;
+    border: 0.5px #eee solid;
+  }
+
+  .user-avatar-container img {
+    max-width: 100%;
+    height: 100%;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-flex;
+    vertical-align: middle;
+    object-fit: cover;
+
+  }
+  .btn-change-avatar {
+    display: flex;
+    width: 200px;
+    text-align: center;
+    border: 1px solid #ccc;
+    outline: 0;
+    align-items: center;
+    justify-content: space-around;
+    margin: 15px 0 30px 0;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .main-user-left {
+    width: 250px;
+    min-height: 500px;
+    padding: 60px 20px 20px 0;
+    border-right: 0.1px solid #a4a4a4;;
+  }
+  .account-menu-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-left: 5px;
+    margin-bottom: 150px;
+  }
+
+  .account-menu-left > a {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    align-items: center;
+    color: #333;
+    
+  }
+
+  .account-menu-left > a:hover{
+    color: #1474FC;
+  }
+  .main-user-right {
+    width: 794px;
+    min-height: 700px;
+  }
+  .main-user-right .main-user-title {
+    margin-left: 50px;
+    font-size: 25px;
+  }
+  .main-user-title table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    font-size: 15px;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin-top: 50px;
+  }
+
+  .main-user-title table tr td {
+   border-top: 1px solid #eee;
+   padding: 20px;
+  }
+  .main-user-title table tr td input {
+    width: 100%;
+  }
+
