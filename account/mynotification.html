@@ -12,7 +12,7 @@
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
 
     <link rel="stylesheet" href="/css/courses-header-footer.css" />
-    <link rel="stylesheet" href="/css/account.css">
+    <link rel="stylesheet" href="/css/mynotification.css">
 </head>
 
 <body>
@@ -76,60 +76,26 @@
                 </div>
                 <button class="btn-change-avatar"><i class="fa-solid fa-camera"></i>Thay đổi ảnh đại diện</button>
                 <div class="account-menu-left">
-                    <a href="/account.html" class="current"><i class="fa-solid fa-address-book"></i><span>Thông tin cá nhân</span></a>
-                    <a href="/account/mynotification.html"><i class="fa-solid fa-bell"></i><span>Thông báo</span></a>
+                    <a href="/account.html"><i class="fa-solid fa-address-book"></i><span>Thông tin cá nhân</span></a>
+                    <a href="/account/mynotification.html" class="current"><i class="fa-solid fa-bell"></i><span>Thông báo</span></a>
                     <a href="/account/mycourses.html"><i class="fa-solid fa-bars"></i><span>Khóa học của tôi</span></a>
                     <a href="/account/myfavorite.html"><i class="fa-solid fa-heart"></i><span>Khóa học yêu thích</span></a>
                     <a href="/account/myscore.html"><i class="fa-solid fa-trophy"></i><span>Sự tiến bộ của tôi</span></a>
-                    <a href="/account/billing.html"><i class="fa-solid fa-credit-card"></i><span>Lịch sử thanh toán</span></a>
+                    <a href="/account/billing.html" ><i class="fa-solid fa-credit-card"></i><span>Lịch sử thanh toán</span></a>
                     <a href="/account/my-promotional-code.html"><i class="fa-solid fa-cart-shopping"></i><span>Nhập mã khuyến mại</span></a>
                     <a href="/index.html"><i class="fa-solid fa-right-from-bracket"></i><span>Đăng xuất</span></a>
                 </div>
             </div>
             <div class="main-user-right">
                 <div class="main-user-title">
-                    <h2>Thông tin cá nhân</h2>
-                    <table id="user-infor-table" class="table">
-                        <tbody>
-                            <tr>
-                                <td>Mã ID</td>
-                                <td><input type="text" disabled></td>
-                             </tr>
-                         <tr>
-                            <td>Họ và tên</td>
-                            <td><input type="text"></td>
-                         </tr>
-                         <tr>
-                            <td>Email</td>
-                            <td><input type="text" disabled></td>
-                         </tr>
-                         <tr>
-                            <td>Ngày sinh</td>
-                            <td><input type="text"></td>
-                         </tr>
-                         <tr>
-                            <td>Số điện thoại</td>
-                            <td><input type="text"></td>
-                         </tr>
-
-                         <tr>
-                            <td>Trình độ tiếng Nhật</td>
-                            <td><input type="text"></td>
-                         </tr>
-                         <tr>
-                            <td>Địa chỉ</td>
-                            <td><input type="text"></td>
-                         </tr>
-                         <tr>
-                            <td>Quốc gia</td>
-                            <td><input type="text"></td>
-                         </tr>
-
-
-                        </tbody>
-                    </table>
-                    <button type="button" class="btn btn-outline-success">Chỉnh Sửa</button>
-                    <button type="button" class="btn btn-outline-dark">Lưu</button>
+                    <h2>Thông báo của bạn</h2>
+                    <div class="bought-courses">
+                        <div class=".bought-courses-container">
+                            <div class="notification-empty-container">Bạn không có thông báo nào</div>
+        
+                        </div>
+                      </div>
+                    
                 </div>
             </div>
         </div>

@@ -94,26 +94,29 @@
   .main-user-right {
     width: 794px;
     min-height: 700px;
+    padding: 40px 0 40px 50px;
   }
-  .main-user-right .main-user-title {
-    margin-left: 50px;
-    font-size: 25px;
-  }
-  .main-user-title table {
+
+.table {
     width: 100%;
     max-width: 100%;
     margin-bottom: 20px;
-    font-size: 15px;
-    border-spacing: 0;
-    border-collapse: collapse;
-    margin-top: 50px;
-  }
+}
 
-  .main-user-title table tr td {
-   border-top: 1px solid #eee;
-   padding: 20px;
-  }
-  .main-user-title table tr td input {
+.bought-courses {
     width: 100%;
-  }
-
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+}
+.bought-courses-container {
+    width: 100%;
+}
+.notification-empty-container {
+    width: 100%;
+    padding: 250px 0;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #999;
+    border: 1px #ddd dashed;
+}

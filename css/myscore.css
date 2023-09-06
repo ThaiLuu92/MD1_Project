@@ -91,29 +91,17 @@
   }
 
   /* CSS MAIN USER RIGHT */
-  .main-user-right {
-    width: 794px;
+
+.main-user-right {
+    width: 100%;
     min-height: 700px;
-  }
-  .main-user-right .main-user-title {
-    margin-left: 50px;
-    font-size: 25px;
-  }
-  .main-user-title table {
-    width: 100%;
-    max-width: 100%;
-    margin-bottom: 20px;
-    font-size: 15px;
-    border-spacing: 0;
-    border-collapse: collapse;
-    margin-top: 50px;
-  }
+    float: left;
+    padding: 40px 0 40px 30px;
+}
 
-  .main-user-title table tr td {
-   border-top: 1px solid #eee;
-   padding: 20px;
-  }
-  .main-user-title table tr td input {
-    width: 100%;
-  }
+.main-user-right .text-lg{
+  font-size: 18px;
+}
 
+
+  

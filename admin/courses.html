@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tài khoản cá nhân</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+
+	<link rel="stylesheet" href="/admin/courses.css">
+</head>
+
+<body>
+	<main>
+		<div class="main-center container">
+			<div class="main-admin-left">
+				<div class="admin-avatar-container">
+					<img src="/images/watchword-img.png" alt="">
+				</div>
+				<div class="admin-text">
+					<p>Admin : Thái </p>
+					<p>Lưu Thái</p>
+				</div>
+
+				<button class="btn-edit"></i>Sửa</button>
+				<div class="admin-menu-left">
+					<a href="/admin.html"><i class="fa-solid fa-users"></i><span>Quản lý người
+							dùng</span></a>
+					<a href="/admin/courses.html" class="current"><i class="fa-solid fa-book-open-reader"></i><span>Quản
+							lý khóa học</span></a>
+					<a href="/admin/product.html"><i class="fa-solid fa-coins"></i><span>Quản lý đơn hàng</span></a>
+					<a href="/index.html"><i class="fa-solid fa-right-from-bracket"></i><span>Đăng xuất</span></a>
+				</div>
+			</div>
+			<div class="main-admin-right">
+				<div class="list-courses lists">
+					<div class="list-courses-title">
+						<div>
+							<h3>Danh sách khóa học</h3>
+						</div>
+						<div><button type="button" class="btn btn-primary">Thêm khóa học</button></div>
+						<div><label for="">Sắp xếp theo: </label>
+							<select name="" id="">
+								<option>Tên</option>
+								<option>Giá từ thấp đến cao</option>
+								<option>Giá từ cao đến thấp</option>
+								<option>Trình độ tiếng Nhật</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="search-bar"><input type="text" name="" id="" placeholder="Tìm kiếm"><button
+							type="button" class="btn btn-primary" id="btn-search-bar"><i
+								class="fa-solid fa-magnifying-glass"></i></button></div>
+					<table class="table">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Mã số</th>
+								<th>Tên khóa học</th>
+								<th>Giá VND</th>
+								<th>Giá JPN</th>
+								<th>Số lượng đã mua</th>
+								<th>Hành động</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>01</td>
+								<td>JLPT N5</td>
+								<td>950,000</td>
+								<td>6,200</td>
+								<td>10</td>
+								<td class="btn-admin"><button type="button" class="btn btn-success">Xem</button>
+									<button type="button" class="btn btn-primary">Sửa</button>
+									<button type="button" class="btn btn-danger">Xóa</button>
+								</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>02</td>
+								<td>JLPT N4</td>
+								<td>950,000</td>
+								<td>6,200</td>
+								<td>10</td>
+								<td class="btn-admin"><button type="button" class="btn btn-success">Xem</button>
+									<button type="button" class="btn btn-primary">Sửa</button>
+									<button type="button" class="btn btn-danger">Xóa</button>
+								</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>03</td>
+								<td>JLPT N3</td>
+								<td>950,000</td>
+								<td>6,200</td>
+								<td>10</td>
+								<td class="btn-admin"><button type="button" class="btn btn-success">Xem</button>
+									<button type="button" class="btn btn-primary">Sửa</button>
+									<button type="button" class="btn btn-danger">Xóa</button>
+								</td>
+							</tr>
+
+						</tbody>
+
+					</table>
+
+				</div>
+			</div>
+
+
+	</main>
+
+
+</body>
+
+</html>
