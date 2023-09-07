@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/register-login-style.css">
+    <link rel="stylesheet" href="/css/login-style.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -23,11 +23,13 @@
               <div class="input-filed">
                 <input type="text" placeholder="Nhập địa chỉ email" required id="inplogin-email" />
                 <i class="fa-regular fa-envelope"></i>
+                <p class="error" id="error-email"></p>
               </div>
               <div class="input-filed">
                 <input class="password" type="password" placeholder="Nhập mật khẩu" required id="inplogin-password"/>
                 <i class="fa-solid fa-lock icon"></i>
                 <i class="fa-regular fa-eye-slash showHidenEye"></i>
+                <p class="error" id="error-password"></p>
               </div>
   
   
@@ -53,6 +55,5 @@
       </div>
   
 </body>
-<script src="/javascript/register-login.js"></script>
-<script src="/javascript/script.js"></script>
+<script src="/javascript/login.js"></script>
 </html>

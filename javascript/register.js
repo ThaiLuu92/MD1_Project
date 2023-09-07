@@ -32,9 +32,11 @@ const addEmail = document.getElementById("input-email");
 const addPassword = document.getElementById("input-password");
 const addRepeatPassword = document.getElementById("input-repeat-password");
 
-formRegisterElement.addEventListener("submit", (e) => {
+
+formRegisterElement ?.addEventListener("submit", (e) => {
   // Chặn action của e
   e.preventDefault();
+  
 
   //   B1: Lấy user từ form
   const user = getUser(); // {user: "", emai: "", password: "", repeatPassword: ""}
@@ -42,6 +44,11 @@ formRegisterElement.addEventListener("submit", (e) => {
   // B2:  Check validator
   const error = checkError(user); // { } --> chứa thông tin lỗi
   renderError(error); // hiển thị loại
+
+  addUserName.value = "";
+  addEmail.value = "";
+  addPassword.value = "";
+  addRepeatPassword.value = "";
 
   if (error.isError) {
     return;
@@ -135,13 +142,6 @@ function renderError(error) {
   errorRepeatPasswordElement.textContent = error.msgRepeatPassword;
 }
 
-// JS phần ĐĂNG NHẬP
 
-const formLoginElement = document.querySelector("#form-login");
-const loginEmail = document.getElementById("inplogin-email");
-const loginPassword = document.getElementById("inplogin-password");
 
-formLoginElement.addEventListener("submit", (e) => {
-  // Chặn action của e
-  e.preventDefault();
-});
+

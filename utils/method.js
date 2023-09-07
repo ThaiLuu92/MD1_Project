@@ -8,3 +8,9 @@ function setLocalStorage(key,value) {
 function getLocalStorage(key) {
     return JSON.parse(localStorage.getItem(key))
 }
+
+// Điều hướng
+function navigationParam(url, param) {
+location.href = `${url}/${param}`
+    
+}
