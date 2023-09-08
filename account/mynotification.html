@@ -34,7 +34,7 @@
                         <a href="#"><i class="fa-brands fa-skype" style="color: #f25f5f"></i>Kakehashi Academy</a>
                     </li>
                 </ul>
-                <div class="header-top-right">
+                <div class="header-top-right" id="top-right">
                     <button class="btn" id="btn-register">Đăng ký</button>
                     <button class="btn" id="btn-login">Đăng nhập</button>
                     <a href=""><i class="fa-brands fa-facebook fa-lg" style="color: #aac5ee"
@@ -45,10 +45,10 @@
                     <a href=""><i class="fa-brands fa-youtube fa-lg" style="color: #aac5ee"
                             title="Follow on Youtube"></i></a>
 
-                    <div class="search">
-                        <input type="text" name="" id="inp-search" placeholder="Tìm kiếm" /><i
-                            class="fa-solid fa-magnifying-glass fa-lg" style="color: #6184c2"></i>
-                    </div>
+                    <form class="search" action="courses.html">
+                        <input type="text" name="q" id="inp-search" placeholder="Tìm kiếm" />
+                        <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #6184c2"></i>
+                    </form>
                 </div>
             </div>
             <div class="header-bottom">
@@ -77,12 +77,17 @@
                 <button class="btn-change-avatar"><i class="fa-solid fa-camera"></i>Thay đổi ảnh đại diện</button>
                 <div class="account-menu-left">
                     <a href="/account.html"><i class="fa-solid fa-address-book"></i><span>Thông tin cá nhân</span></a>
-                    <a href="/account/mynotification.html" class="current"><i class="fa-solid fa-bell"></i><span>Thông báo</span></a>
+                    <a href="/account/mynotification.html" class="current"><i class="fa-solid fa-bell"></i><span>Thông
+                            báo</span></a>
                     <a href="/account/mycourses.html"><i class="fa-solid fa-bars"></i><span>Khóa học của tôi</span></a>
-                    <a href="/account/myfavorite.html"><i class="fa-solid fa-heart"></i><span>Khóa học yêu thích</span></a>
-                    <a href="/account/myscore.html"><i class="fa-solid fa-trophy"></i><span>Sự tiến bộ của tôi</span></a>
-                    <a href="/account/billing.html" ><i class="fa-solid fa-credit-card"></i><span>Lịch sử thanh toán</span></a>
-                    <a href="/account/my-promotional-code.html"><i class="fa-solid fa-cart-shopping"></i><span>Nhập mã khuyến mại</span></a>
+                    <a href="/account/myfavorite.html"><i class="fa-solid fa-heart"></i><span>Khóa học yêu
+                            thích</span></a>
+                    <a href="/account/myscore.html"><i class="fa-solid fa-trophy"></i><span>Sự tiến bộ của
+                            tôi</span></a>
+                    <a href="/account/billing.html"><i class="fa-solid fa-credit-card"></i><span>Lịch sử thanh
+                            toán</span></a>
+                    <a href="/account/my-promotional-code.html"><i class="fa-solid fa-cart-shopping"></i><span>Nhập mã
+                            khuyến mại</span></a>
                     <a href="/index.html"><i class="fa-solid fa-right-from-bracket"></i><span>Đăng xuất</span></a>
                 </div>
             </div>
@@ -92,10 +97,10 @@
                     <div class="bought-courses">
                         <div class=".bought-courses-container">
                             <div class="notification-empty-container">Bạn không có thông báo nào</div>
-        
+
                         </div>
-                      </div>
-                    
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -166,5 +171,9 @@
         </div>
     </footer>
 </body>
+<script src="utils/method.js"></script>
+<script src="utils/dataBase.js"></script>
+
+<script src="/javascript/header.js"></script>
 
 </html>

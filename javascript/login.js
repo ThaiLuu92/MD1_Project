@@ -51,21 +51,21 @@ formLoginElement?.addEventListener("submit", (e) => {
   let isAuthenticated = false;
   for (const account of accountsDB) {
     if (account.email == email && account.password == password) {
+      localStorage.setItem("userLogin", JSON.stringify(account));
       isAuthenticated = true;
       break; // Kết thúc vòng lặp khi tìm thấy khớp
     }
   }
 
-  console.log(isAuthenticated);
-  console.log(email);
-  console.log(password);
 
   if (isAuthenticated) {
-    alert("Đăng nhập thành công!");
+    // alert("Đăng nhập thành công!");
     // window.location.href = "index.html";
     navigation("index.html")
+    
     emailElement.value = "";
     passwordElement.value = "";
+    
   } else {
     errorEmail.textContent =
       "Đăng nhập thất bại. Vui lòng kiểm tra email và mật khẩu.";
@@ -76,6 +76,4 @@ formLoginElement?.addEventListener("submit", (e) => {
 // HÀm điều hướng
 function navigation(path) {
     window.location.pathname = path;
-    
   }
-  

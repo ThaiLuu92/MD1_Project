@@ -87,10 +87,17 @@ formRegisterElement ?.addEventListener("submit", (e) => {
 
 function getUser() {
   return {
+    userId:"",
     userName: addUserName.value,
     email: addEmail.value.toLowerCase().trim(),
     password: addPassword.value,
     repeatPassword: addRepeatPassword.value,
+    birthday:"",
+    phone: "",
+    japaneseLevel: "",
+    address: "",
+    country: "",
+    avatar:"https://demoda.vn/wp-content/uploads/2022/04/hinh-cute-anh-cute-777x600.jpg",
   };
 }
 function checkError(user) {

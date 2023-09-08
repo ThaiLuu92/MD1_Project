@@ -32,7 +32,7 @@
                         <a href="#"><i class="fa-brands fa-skype" style="color: #f25f5f"></i>Kakehashi Academy</a>
                     </li>
                 </ul>
-                <div class="header-top-right">
+                <div class="header-top-right" id="top-right">
                     <button class="btn" id="btn-register">Đăng ký</button>
                     <button class="btn" id="btn-login">Đăng nhập</button>
                     <a href=""><i class="fa-brands fa-facebook fa-lg" style="color: #aac5ee"
@@ -43,10 +43,11 @@
                     <a href=""><i class="fa-brands fa-youtube fa-lg" style="color: #aac5ee"
                             title="Follow on Youtube"></i></a>
 
-                    <div class="search">
-                        <input type="text" name="" id="inp-search" placeholder="Tìm kiếm" /><i
-                            class="fa-solid fa-magnifying-glass fa-lg" style="color: #6184c2"></i>
-                    </div>
+                            <form class="search" action="courses.html">
+                                <input type="text" name="q" id="inp-search" placeholder="Tìm kiếm" />
+                                <i
+                                  class="fa-solid fa-magnifying-glass fa-lg" style="color: #6184c2"></i>
+                              </form>
                 </div>
             </div>
             <div class="header-bottom">
@@ -159,4 +160,8 @@
     </footer>
     
 </body>
+<script src="utils/method.js"></script>
+<script src="utils/dataBase.js"></script>
+
+<script src="/javascript/header.js"></script>
 </html>

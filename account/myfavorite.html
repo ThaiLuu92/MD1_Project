@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,7 @@
     <link rel="stylesheet" href="/css/courses-header-footer.css" />
     <link rel="stylesheet" href="/css/myfavorite.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -32,7 +34,7 @@
                         <a href="#"><i class="fa-brands fa-skype" style="color: #f25f5f"></i>Kakehashi Academy</a>
                     </li>
                 </ul>
-                <div class="header-top-right">
+                <div class="header-top-right" id="top-right">
                     <button class="btn" id="btn-register">Đăng ký</button>
                     <button class="btn" id="btn-login">Đăng nhập</button>
                     <a href=""><i class="fa-brands fa-facebook fa-lg" style="color: #aac5ee"
@@ -43,10 +45,10 @@
                     <a href=""><i class="fa-brands fa-youtube fa-lg" style="color: #aac5ee"
                             title="Follow on Youtube"></i></a>
 
-                    <div class="search">
-                        <input type="text" name="" id="inp-search" placeholder="Tìm kiếm" /><i
-                            class="fa-solid fa-magnifying-glass fa-lg" style="color: #6184c2"></i>
-                    </div>
+                    <form class="search" action="courses.html">
+                        <input type="text" name="q" id="inp-search" placeholder="Tìm kiếm" />
+                        <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #6184c2"></i>
+                    </form>
                 </div>
             </div>
             <div class="header-bottom">
@@ -76,27 +78,34 @@
                 <div class="account-menu-left">
                     <a href="/account.html"><i class="fa-solid fa-address-book"></i><span>Thông tin cá nhân</span></a>
                     <a href="/account/mynotification.html"><i class="fa-solid fa-bell"></i><span>Thông báo</span></a>
-                    <a href="/account/mycourses.html" class="current"><i class="fa-solid fa-bars"></i><span>Khóa học của tôi</span></a>
-                    <a href="/account/myfavorite.html"><i class="fa-solid fa-heart"></i><span>Khóa học yêu thích</span></a>
-                    <a href="/account/myscore.html"><i class="fa-solid fa-trophy"></i><span>Sự tiến bộ của tôi</span></a>
-                    <a href="/account/billing.html"><i class="fa-solid fa-credit-card"></i><span>Lịch sử thanh toán</span></a>
-                    <a href="/account/my-promotional-code.html"><i class="fa-solid fa-cart-shopping"></i><span>Nhập mã khuyến mại</span></a>
+                    <a href="/account/mycourses.html" class="current"><i class="fa-solid fa-bars"></i><span>Khóa học của
+                            tôi</span></a>
+                    <a href="/account/myfavorite.html"><i class="fa-solid fa-heart"></i><span>Khóa học yêu
+                            thích</span></a>
+                    <a href="/account/myscore.html"><i class="fa-solid fa-trophy"></i><span>Sự tiến bộ của
+                            tôi</span></a>
+                    <a href="/account/billing.html"><i class="fa-solid fa-credit-card"></i><span>Lịch sử thanh
+                            toán</span></a>
+                    <a href="/account/my-promotional-code.html"><i class="fa-solid fa-cart-shopping"></i><span>Nhập mã
+                            khuyến mại</span></a>
                     <a href="#"><i class="fa-solid fa-right-from-bracket"></i><span>Đăng xuất</span></a>
                 </div>
             </div>
             <div class="main-user-right">
-              <div class="dm-tab">
-                <div class="tab-item active">Danh sách khóa học yêu thích</div>
-              </div>
-              <div class="bought-courses">
-                <div class=".bought-courses-container">
-                    <div class="notification-empty-container">Bạn chưa có khóa học yêu thích nào</div>
-
+                <div class="dm-tab">
+                    <div class="tab-item active">Danh sách khóa học yêu thích</div>
                 </div>
-              </div>
-              <div class="dm-tab">
-                <a href="/courses.html"><div class="tab-item">Xem thêm các khóa học khác</div></a>
-              </div>
+                <div class="bought-courses">
+                    <div class=".bought-courses-container">
+                        <div class="notification-empty-container">Bạn chưa có khóa học yêu thích nào</div>
+
+                    </div>
+                </div>
+                <div class="dm-tab">
+                    <a href="/courses.html">
+                        <div class="tab-item">Xem thêm các khóa học khác</div>
+                    </a>
+                </div>
 
 
             </div>
@@ -167,6 +176,11 @@
             <p>Copyright 2023 © by <span>KAKEHASHI ACADEMY</span></p>
         </div>
     </footer>
-    
+
 </body>
+<script src="utils/method.js"></script>
+<script src="utils/dataBase.js"></script>
+
+<script src="/javascript/header.js"></script>
+
 </html>

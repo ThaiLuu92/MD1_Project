@@ -11,14 +11,9 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
-  <!-- <link
-      href="
-https://cdn.jsdelivr.net/npm/swiper@10.2.0/swiper-bundle.min.css
-"
-      rel="stylesheet"
-    /> -->
 
-  <link rel="stylesheet" href="/css/header-style.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/courses-header-footer.css">
 </head>
 
 <body>
@@ -40,18 +35,21 @@ https://cdn.jsdelivr.net/npm/swiper@10.2.0/swiper-bundle.min.css
             <a href="#"><i class="fa-brands fa-skype" style="color: #f25f5f"></i>Kakehashi Academy</a>
           </li>
         </ul>
-        <div class="header-top-right">
-          <a href="/register.html"><button class="btn" id="btn-register">Đăng ký</button></a>
-          <a href="/login.html"><button class="btn" id="btn-login">Đăng nhập</button></a>
+        <div class="header-top-right" id="top-right">
+          <div id="account-user">
+            <a href="/register.html"><button class="btn" id="btn-register">Đăng ký</button></a>
+            <a href="/login.html"><button class="btn" id="btn-login">Đăng nhập</button></a>
+          </div>
           <a href=""><i class="fa-brands fa-facebook fa-lg" style="color: #aac5ee" title="Follow on Facebook"></i></a>
           <a href=""><i class="fa-solid fa-envelope fa-lg" style="color: #aac5ee" title="Sent us an email"></i></a>
 
           <a href=""><i class="fa-brands fa-youtube fa-lg" style="color: #aac5ee" title="Follow on Youtube"></i></a>
 
-          <div class="search">
-            <input type="text" name="" id="inp-search" placeholder="Tìm kiếm" /><i
+          <form class="search" action="courses.html">
+            <input type="text" name="q" id="inp-search" placeholder="Tìm kiếm" />
+            <i
               class="fa-solid fa-magnifying-glass fa-lg" style="color: #6184c2"></i>
-          </div>
+          </form>
         </div>
       </div>
       <div class="header-bottom">
@@ -109,72 +107,12 @@ https://cdn.jsdelivr.net/npm/swiper@10.2.0/swiper-bundle.min.css
 
           </ul>
 
-        
+
           <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-jlpt" role="tabpanel" aria-labelledby="pills-jlpt-tab"
               tabindex="0">
               <ul class="nav nav-pills" id="course-jlpt">
-               
-              </ul>
-            </div>
-            <div class="tab-pane fade" id="pills-jlpttest" role="tabpanel" aria-labelledby="pills-jlpttest-tab"
-              tabindex="0">
-              <ul class="nav nav-pills">
-                <li class="nav-item">
-                  <a class="nav-link btn-csl-jlpt" href="#"><button type="button" class="btn btn-outline-primary">
-                      Luyện đề N1
-                    </button></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link btn-csl-jlpt" href="#"><button type="button" class="btn btn-outline-primary">
-                      Luyện đề N2
-                    </button></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link btn-csl-jlpt" href="#"><button type="button" class="btn btn-outline-primary">
-                      Luyện đề N3
-                    </button></a>
-                </li>
-              </ul>
-            </div>
-            <div class="tab-pane fade" id="pills-jlptkaiwa" role="tabpanel" aria-labelledby="pills-jlptkaiwa-tab"
-              tabindex="0">
-              <ul class="nav nav-pills">
-                <li class="nav-item">
-                  <a class="nav-link btn-csl-jlpt" href="#"><button type="button" class="btn btn-outline-primary">
-                      Kaiwa Sơ cấp
-                    </button></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link btn-csl-jlpt" href="#"><button type="button" class="btn btn-outline-primary">
-                      Kaiwa Trung cấp
-                    </button></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link btn-csl-jlpt" href="#"><button type="button" class="btn btn-outline-primary">
-                      Kaiwa Cao cấp
-                    </button></a>
-                </li>
-              </ul>
-            </div>
-            <div class="tab-pane fade" id="pills-jlptbusiness" role="tabpanel" aria-labelledby="pills-jlptbusiness-tab"
-              tabindex="0">
-              <ul class="nav nav-pills">
-                <li class="nav-item">
-                  <a class="nav-link btn-csl-jlpt" href="#"><button type="button" class="btn btn-outline-primary">
-                      Tiếng Nhật Business Sơ cấp
-                    </button></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link btn-csl-jlpt" href="#"><button type="button" class="btn btn-outline-primary">
-                      Tiếng Nhật Business Trung cấp
-                    </button></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link btn-csl-jlpt" href="#"><button type="button" class="btn btn-outline-primary">
-                      Tiếng Nhật Business Cao cấp
-                    </button></a>
-                </li>
+
               </ul>
             </div>
           </div>
@@ -358,7 +296,7 @@ https://cdn.jsdelivr.net/npm/swiper@10.2.0/swiper-bundle.min.css
         <a href="#"><i class="fa-solid fa-phone-volume"></i> Hotline: 0901 456 111</a>
         <a href="#"><i class="fa-solid fa-location-dot"></i> Trụ sở 2: Tòa nhà A, Đường B, Phường C, Quận D, Hồ Chí
           Minh</a>
-      
+
         <a href="#"><i class="fa-solid fa-phone-volume"></i> Hotline: 0901 456 111</a>
         <a href="#"><i class="fa-solid fa-envelope"></i> Email: kakehashicenter@gmail.com</a>
         <a href="#"><i class="fa-solid fa-earth-americas"></i> Website: www.kakehashicenter.vn</a>
@@ -389,7 +327,7 @@ https://cdn.jsdelivr.net/npm/swiper@10.2.0/swiper-bundle.min.css
       <div class="center-social">
         <h4>Kết nối </h4>
         <div class="social-logo">
-          
+
           <a href="#"><i class="fa-brands fa-facebook"></i></a>
           <a href="#"><i class="fa-brands fa-instagram"></i></a>
           <a href="#"><i class="fa-brands fa-youtube"></i></a>
@@ -403,12 +341,18 @@ https://cdn.jsdelivr.net/npm/swiper@10.2.0/swiper-bundle.min.css
       </div>
 
     </div>
-    <div class="copyright-box"><p>Copyright 2023 © by <span>KAKEHASHI ACADEMY</span></p></div>
+    <div class="copyright-box">
+      <p>Copyright 2023 © by <span>KAKEHASHI ACADEMY</span></p>
+    </div>
   </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 <script src="utils/method.js"></script>
 <script src="utils/dataBase.js"></script>
+
+
+<script src="/javascript/header.js"></script>
 <script src="/javascript/index.js"></script>
+
 </html>

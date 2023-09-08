@@ -18,6 +18,29 @@
   li {
     list-style-type: none;
   }
+
+  /* body {
+    position: relative;
+  } */
+
+  .to-top {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+
+  .to-top button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #c5c2c2;
+    border-radius: 5px;
+  }
+
+  .to-top button i {
+    font-size: 20px;
+    text-align: center;
+    color: black;
+  }
 /* CSS MAIN CENTER */
 .main-center-bg {
     padding: 50px 0;

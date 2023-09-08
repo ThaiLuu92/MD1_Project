@@ -89,6 +89,30 @@
     color: white;
     flex-wrap: nowrap;
   }
+
+  #btn-logout {
+    background-color: #1474fc;
+    border: 1px solid white;
+    outline: none;
+    color: white;
+    flex-wrap: nowrap;
+  }
+
+  #avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #b3abab;
+    cursor: pointer;
+  }
+
+  #avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+
+  }
   
   /* CSS HEADER TOP LEFT */
   .header-top-left {

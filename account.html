@@ -34,9 +34,9 @@
                         <a href="#"><i class="fa-brands fa-skype" style="color: #f25f5f"></i>Kakehashi Academy</a>
                     </li>
                 </ul>
-                <div class="header-top-right">
-                    <button class="btn" id="btn-register">Đăng ký</button>
-                    <button class="btn" id="btn-login">Đăng nhập</button>
+                <div class="header-top-right" id="top-right">
+                    <a href="/register.html"><button class="btn" id="btn-register">Đăng ký</button></a>
+                    <a href="/login.html"><button class="btn" id="btn-login">Đăng nhập</button></a>
                     <a href=""><i class="fa-brands fa-facebook fa-lg" style="color: #aac5ee"
                             title="Follow on Facebook"></i></a>
                     <a href=""><i class="fa-solid fa-envelope fa-lg" style="color: #aac5ee"
@@ -45,10 +45,10 @@
                     <a href=""><i class="fa-brands fa-youtube fa-lg" style="color: #aac5ee"
                             title="Follow on Youtube"></i></a>
 
-                    <div class="search">
-                        <input type="text" name="" id="inp-search" placeholder="Tìm kiếm" /><i
-                            class="fa-solid fa-magnifying-glass fa-lg" style="color: #6184c2"></i>
-                    </div>
+                    <form class="search" action="courses.html">
+                        <input type="text" name="q" id="inp-search" placeholder="Tìm kiếm" />
+                        <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #6184c2"></i>
+                    </form>
                 </div>
             </div>
             <div class="header-bottom">
@@ -76,13 +76,18 @@
                 </div>
                 <button class="btn-change-avatar"><i class="fa-solid fa-camera"></i>Thay đổi ảnh đại diện</button>
                 <div class="account-menu-left">
-                    <a href="/account.html" class="current"><i class="fa-solid fa-address-book"></i><span>Thông tin cá nhân</span></a>
+                    <a href="/account.html" class="current"><i class="fa-solid fa-address-book"></i><span>Thông tin cá
+                            nhân</span></a>
                     <a href="/account/mynotification.html"><i class="fa-solid fa-bell"></i><span>Thông báo</span></a>
                     <a href="/account/mycourses.html"><i class="fa-solid fa-bars"></i><span>Khóa học của tôi</span></a>
-                    <a href="/account/myfavorite.html"><i class="fa-solid fa-heart"></i><span>Khóa học yêu thích</span></a>
-                    <a href="/account/myscore.html"><i class="fa-solid fa-trophy"></i><span>Sự tiến bộ của tôi</span></a>
-                    <a href="/account/billing.html"><i class="fa-solid fa-credit-card"></i><span>Lịch sử thanh toán</span></a>
-                    <a href="/account/my-promotional-code.html"><i class="fa-solid fa-cart-shopping"></i><span>Nhập mã khuyến mại</span></a>
+                    <a href="/account/myfavorite.html"><i class="fa-solid fa-heart"></i><span>Khóa học yêu
+                            thích</span></a>
+                    <a href="/account/myscore.html"><i class="fa-solid fa-trophy"></i><span>Sự tiến bộ của
+                            tôi</span></a>
+                    <a href="/account/billing.html"><i class="fa-solid fa-credit-card"></i><span>Lịch sử thanh
+                            toán</span></a>
+                    <a href="/account/my-promotional-code.html"><i class="fa-solid fa-cart-shopping"></i><span>Nhập mã
+                            khuyến mại</span></a>
                     <a href="/index.html"><i class="fa-solid fa-right-from-bracket"></i><span>Đăng xuất</span></a>
                 </div>
             </div>
@@ -91,43 +96,40 @@
                     <h2>Thông tin cá nhân</h2>
                     <table id="user-infor-table" class="table">
                         <tbody>
-                            <tr>
-                                <td>Mã ID</td>
-                                <td><input type="text" disabled></td>
-                             </tr>
-                         <tr>
-                            <td>Họ và tên</td>
-                            <td><input type="text"></td>
-                         </tr>
-                         <tr>
-                            <td>Email</td>
-                            <td><input type="text" disabled></td>
-                         </tr>
-                         <tr>
-                            <td>Ngày sinh</td>
-                            <td><input type="text"></td>
-                         </tr>
-                         <tr>
-                            <td>Số điện thoại</td>
-                            <td><input type="text"></td>
-                         </tr>
-
-                         <tr>
-                            <td>Trình độ tiếng Nhật</td>
-                            <td><input type="text"></td>
-                         </tr>
-                         <tr>
-                            <td>Địa chỉ</td>
-                            <td><input type="text"></td>
-                         </tr>
-                         <tr>
-                            <td>Quốc gia</td>
-                            <td><input type="text"></td>
-                         </tr>
-
-
+                          <tr>
+                            <td>Mã ID:</td>
+                            <td><div id="user-id"></div></td>
+                          </tr>
+                          <tr>
+                            <td>Họ và tên:</td>
+                            <td><div id="user-fullname"></div></td>
+                          </tr>
+                          <tr>
+                            <td>Email:</td>
+                            <td><div id="user-email"></div></td>
+                          </tr>
+                          <tr>
+                            <td>Ngày sinh:</td>
+                            <td><div id="user-birthday"></div></td>
+                          </tr>
+                          <tr>
+                            <td>Số điện thoại:</td>
+                            <td><div id="user-phone"></div></td>
+                          </tr>
+                          <tr>
+                            <td>Trình độ tiếng Nhật:</td>
+                            <td><div id="user-japanese-level"></div></td>
+                          </tr>
+                          <tr>
+                            <td>Địa chỉ:</td>
+                            <td><div id="user-address"></div></td>
+                          </tr>
+                          <tr>
+                            <td>Quốc gia:</td>
+                            <td><div id="user-country"></div></td>
+                          </tr>
                         </tbody>
-                    </table>
+                      </table>
                     <button type="button" class="btn btn-outline-success">Chỉnh Sửa</button>
                     <button type="button" class="btn btn-outline-dark">Lưu</button>
                 </div>
@@ -200,5 +202,11 @@
         </div>
     </footer>
 </body>
+
+<script src="utils/method.js"></script>
+<script src="utils/dataBase.js"></script>
+
+<script src="/javascript/header.js"></script>
+<script src="/javascript/account.js"></script>
 
 </html>
