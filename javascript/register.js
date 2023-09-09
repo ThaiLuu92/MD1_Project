@@ -93,6 +93,8 @@ function getUser() {
     password: addPassword.value,
     repeatPassword: addRepeatPassword.value,
     birthday:"",
+    gender:"",
+    age:"",
     phone: "",
     japaneseLevel: "",
     address: "",

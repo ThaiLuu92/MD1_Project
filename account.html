@@ -71,10 +71,11 @@
     <main>
         <div class="main-center container">
             <div class="main-user-left">
-                <div class="user-avatar-container">
-                    <img src="/images/watchword-img.png" alt="">
+                <div class="user-avatar-container" id="user-avatar">
+                    <img src="/images/watchword-img.png" alt="" id="avatar-preview">
                 </div>
-                <button class="btn-change-avatar"><i class="fa-solid fa-camera"></i>Thay đổi ảnh đại diện</button>
+                <input type="file" id="avatar-input" accept="image/*" style="display: none;">
+                <button class="btn-change-avatar" id="change-avatar-button"><i class="fa-solid fa-camera"></i> Thay đổi ảnh đại diện</button>
                 <div class="account-menu-left">
                     <a href="/account.html" class="current"><i class="fa-solid fa-address-book"></i><span>Thông tin cá
                             nhân</span></a>
@@ -94,44 +95,61 @@
             <div class="main-user-right">
                 <div class="main-user-title">
                     <h2>Thông tin cá nhân</h2>
-                    <table id="user-infor-table" class="table">
-                        <tbody>
-                          <tr>
-                            <td>Mã ID:</td>
-                            <td><div id="user-id"></div></td>
-                          </tr>
-                          <tr>
-                            <td>Họ và tên:</td>
-                            <td><div id="user-fullname"></div></td>
-                          </tr>
-                          <tr>
-                            <td>Email:</td>
-                            <td><div id="user-email"></div></td>
-                          </tr>
-                          <tr>
-                            <td>Ngày sinh:</td>
-                            <td><div id="user-birthday"></div></td>
-                          </tr>
-                          <tr>
-                            <td>Số điện thoại:</td>
-                            <td><div id="user-phone"></div></td>
-                          </tr>
-                          <tr>
-                            <td>Trình độ tiếng Nhật:</td>
-                            <td><div id="user-japanese-level"></div></td>
-                          </tr>
-                          <tr>
-                            <td>Địa chỉ:</td>
-                            <td><div id="user-address"></div></td>
-                          </tr>
-                          <tr>
-                            <td>Quốc gia:</td>
-                            <td><div id="user-country"></div></td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    <button type="button" class="btn btn-outline-success">Chỉnh Sửa</button>
-                    <button type="button" class="btn btn-outline-dark">Lưu</button>
+                    <form action="#" id="form-infor">
+                        <table id="user-infor-table" class="table">
+                            <tbody>
+                                <tr>
+                                    <td>Mã ID:</td>
+                                    <td><div id="user-id"></div></td>
+                                </tr>
+                                <tr>
+                                    <td>Họ và tên:</td>
+                                    <td><input type="text" id="user-fullname" disabled></td>
+                                </tr>
+                                <tr>
+                                    <td>Email:</td>
+                                    <td><input type="email" id="user-email" disabled></td>
+                                </tr>
+                                <tr>
+                                    <td>Ngày sinh:</td>
+                                    <td><input type="date" id="user-birthday" disabled></td>
+                                </tr>
+                                <tr>
+                                    <td>Giới tính:</td>
+                                    <td>
+                                      <select id="user-gender" disabled>
+                                        <option value="male">Nam</option>
+                                        <option value="female">Nữ</option>
+                                        <option value="other">Khác</option>
+                                      </select>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Tuổi:</td>
+                                    <td><input type="number" id="user-age" disabled></td>
+                                  </tr>
+                                  <tr>
+                                <tr>
+                                    <td>Số điện thoại:</td>
+                                    <td><input type="tel" id="user-phone" disabled></td>
+                                </tr>
+                                <tr>
+                                    <td>Trình độ tiếng Nhật:</td>
+                                    <td><input type="text" id="user-japanese-level" disabled></td>
+                                </tr>
+                                <tr>
+                                    <td>Địa chỉ:</td>
+                                    <td><input type="text" id="user-address" disabled></td>
+                                </tr>
+                                <tr>
+                                    <td>Quốc gia:</td>
+                                    <td><input type="text" id="user-country" disabled></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button type="button" class="btn btn-outline-success" id="edit-button">Chỉnh Sửa</button>
+                        <button type="button" class="btn btn-outline-dark" id="save-button" style="display: none;">Lưu</button>
+                    </form>
                 </div>
             </div>
         </div>
