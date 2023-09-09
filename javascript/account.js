@@ -48,8 +48,24 @@ if (userLogins && userData && userData.length > 0) {
       userJapaneseLevelElement.value = user.japaneseLevel || "Chưa cập nhật";
       userAddressElement.value = user.address || "Chưa cập nhật";
       userCountryElement.value = user.country || "Chưa cập nhật";
-      userAvatarElement.innerHTML = user.avatar ||`<img src="https://demoda.vn/wp-content/uploads/2022/04/hinh-cute-anh-cute-777x600.jpg" alt="" id="avatar-preview">`;
+      userAvatarElement.innerHTML = `<img src="${user.avatar ||
+        "https://grn-admin.mpoint.vn/uploads/avatar-mac-dinh.png"}" alt="" id="avatar-preview">`;
     }
+
+    function renderAvatar(user) {
+      const defaultAvatarURL = "https://grn-admin.mpoint.vn/uploads/avatar-mac-dinh.png";
+      
+      // Kiểm tra xem user và avatar có tồn tại
+      if (user && user.avatar) {
+        // Nếu có avatar, sử dụng nó
+        const avatarURL = user.avatar;
+        userAvatarElement.innerHTML = `<img src="${avatarURL}" alt="" id="avatar-preview">`;
+      } else {
+        // Nếu không có avatar, sử dụng ảnh mặc định
+        userAvatarElement.innerHTML = `<img src="${defaultAvatarURL}" alt="" id="avatar-preview">`;
+      }
+    }
+    renderAvatar();
 
     // Render thông tin người dùng ban đầu
     renderUserInfo(currentUser);
@@ -105,6 +121,35 @@ if (userLogins && userData && userData.length > 0) {
     // Event listener cho nút "Lưu"
     saveButton.addEventListener("click", saveUserInfo);
     
-    
+    avatarInput.addEventListener("change", () => {
+      const selectedFile = avatarInput.files[0];
+
+      if (selectedFile) {
+        // Kiểm tra nếu tệp được chọn là hình ảnh
+        if (selectedFile.type.startsWith("image/")) {
+          const reader = new FileReader();
+
+          // Đọc tệp hình ảnh và hiển thị nó trên trang
+          reader.onload = (event) => {
+            avatarPreview.src = event.target.result;
+            currentUser.avatar = event.target.result; // Lưu ảnh mới vào đối tượng người dùng
+            // Lưu thông tin người dùng vào localStorage sau khi thay đổi avatar
+            setLocalStorage("accounts", userData);
+            renderAvatar(selectedFile)
+          };
+        
+
+          reader.readAsDataURL(selectedFile);
+        } else {
+          alert("Vui lòng chọn một tệp hình ảnh.");
+          avatarInput.value = null; 
+        }
+      }
+    });
+
+    // Bắt đầu chế độ chỉnh sửa ảnh đại diện khi nút "Thay đổi ảnh đại diện" được nhấn
+    changeAvatarButton.addEventListener("click", () => {
+      avatarInput.click(); // Mở hộp thoại chọn tệp
+    });
   }
 }

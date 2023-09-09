@@ -32,11 +32,9 @@ const addEmail = document.getElementById("input-email");
 const addPassword = document.getElementById("input-password");
 const addRepeatPassword = document.getElementById("input-repeat-password");
 
-
-formRegisterElement ?.addEventListener("submit", (e) => {
+formRegisterElement?.addEventListener("submit", (e) => {
   // Chặn action của e
   e.preventDefault();
-  
 
   //   B1: Lấy user từ form
   const user = getUser(); // {user: "", emai: "", password: "", repeatPassword: ""}
@@ -65,6 +63,10 @@ formRegisterElement ?.addEventListener("submit", (e) => {
       break;
     }
   }
+  // Điều hướng người dùng đến trang đăng nhập sau khi đăng ký thành công
+  function redirectToLogin() {
+    window.location.href = "login.html";
+  }
 
   //   B4: Điều hướng login
   if (!isExist) {
@@ -74,6 +76,7 @@ formRegisterElement ?.addEventListener("submit", (e) => {
 
     localStorage.setItem("accounts", JSON.stringify(accountsDB));
     // Điều hướng login
+    redirectToLogin();
   } else {
     error.isError = true;
     error.msgEmail =
@@ -87,19 +90,19 @@ formRegisterElement ?.addEventListener("submit", (e) => {
 
 function getUser() {
   return {
-    userId:"",
+    userId: "",
     userName: addUserName.value,
     email: addEmail.value.toLowerCase().trim(),
     password: addPassword.value,
     repeatPassword: addRepeatPassword.value,
-    birthday:"",
-    gender:"",
-    age:"",
+    birthday: "",
+    gender: "",
+    age: "",
     phone: "",
     japaneseLevel: "",
     address: "",
     country: "",
-    avatar:"https://demoda.vn/wp-content/uploads/2022/04/hinh-cute-anh-cute-777x600.jpg",
+    avatar: "https://grn-admin.mpoint.vn/uploads/avatar-mac-dinh.png",
   };
 }
 function checkError(user) {
@@ -150,7 +153,3 @@ function renderError(error) {
   errorPasswordElement.textContent = error.msgPassword;
   errorRepeatPasswordElement.textContent = error.msgRepeatPassword;
 }
-
-
-
-

@@ -30,7 +30,9 @@ btnLogout?.addEventListener("click", function () {
   // Xóa thông tin đăng nhập khỏi LocalStorage
   localStorage.removeItem("userLogin");
   // Tải lại trang đã đăng xuất
-  location.reload();
+  // location.reload();
+  // Điều hướng người dùng về trang index.html sau khi đăng xuất
+  window.location.href = "index.html"; 
 });
 
 // Lấy phần tử avatar
