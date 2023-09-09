@@ -135,7 +135,8 @@ if (userLogins && userData && userData.length > 0) {
             currentUser.avatar = event.target.result; // Lưu ảnh mới vào đối tượng người dùng
             // Lưu thông tin người dùng vào localStorage sau khi thay đổi avatar
             setLocalStorage("accounts", userData);
-            renderAvatar(selectedFile)
+            renderAvatar(currentUser); // Hiển thị avatar mới
+            // Sau khi cập nhật avatar, tải lại trang
           };
         
 
@@ -148,8 +149,10 @@ if (userLogins && userData && userData.length > 0) {
     });
 
     // Bắt đầu chế độ chỉnh sửa ảnh đại diện khi nút "Thay đổi ảnh đại diện" được nhấn
-    changeAvatarButton.addEventListener("click", () => {
+      changeAvatarButton.addEventListener("click", () => {
       avatarInput.click(); // Mở hộp thoại chọn tệp
     });
   }
 }
+
+
