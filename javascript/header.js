@@ -1,5 +1,6 @@
 // Lấy thông tin người dùng từ LocalStorage
 const userLogin = JSON.parse(localStorage.getItem("userLogin"));
+const userDatas = getLocalStorage("accounts");
 // Lấy phần tử header cần cập nhật
 const headerElement = document.getElementById("top-right");
 // Kiểm tra xem người dùng đã đăng nhập hay chưa

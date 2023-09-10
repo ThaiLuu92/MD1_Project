@@ -60,6 +60,10 @@ if (userLogins && userData && userData.length > 0) {
         // Nếu có avatar, sử dụng nó
         const avatarURL = user.avatar;
         userAvatarElement.innerHTML = `<img src="${avatarURL}" alt="" id="avatar-preview">`;
+        const changeAvatar= document.querySelector("#avatar>img")
+        changeAvatar.src = avatarURL
+        userLogins.avatar = avatarURL
+        setLocalStorage("userLogin",userLogins)
       } else {
         // Nếu không có avatar, sử dụng ảnh mặc định
         userAvatarElement.innerHTML = `<img src="${defaultAvatarURL}" alt="" id="avatar-preview">`;
@@ -71,7 +75,7 @@ if (userLogins && userData && userData.length > 0) {
     renderUserInfo(currentUser);
     function enableEditMode() {
       userNameElement.removeAttribute("disabled");
-      userEmailElement.removeAttribute("disabled");
+      // userEmailElement.removeAttribute("disabled");
       userBirthdayElement.removeAttribute("disabled");
       userGenderElement.removeAttribute("disabled");
       userAgeElement.removeAttribute("disabled");
@@ -87,7 +91,7 @@ if (userLogins && userData && userData.length > 0) {
     // Function để lưu thông tin sau khi chỉnh sửa
     function saveUserInfo() {
       currentUser.userName = userNameElement.value;
-      currentUser.email = userEmailElement.value;
+      // currentUser.email = userEmailElement.value;
       currentUser.birthday = userBirthdayElement.value;
       currentUser.gender = userGenderElement.value;
       currentUser.age = userAgeElement.value;
@@ -98,11 +102,11 @@ if (userLogins && userData && userData.length > 0) {
 
 
       // Lưu thông tin người dùng vào localStorage
-      // Sử dụng hàm setLocalStorage (thay thế bằng hàm thực tế của bạn)
       setLocalStorage("accounts", userData);
+      setLocalStorage("userLogin", userLogins);
 
       userNameElement.setAttribute("disabled", true);
-      userEmailElement.setAttribute("disabled", true);
+      // userEmailElement.setAttribute("disabled");
       userBirthdayElement.setAttribute("disabled", true);
       userGenderElement.setAttribute("disabled", true);
       userAgeElement.setAttribute("disabled", true);
@@ -135,8 +139,8 @@ if (userLogins && userData && userData.length > 0) {
             currentUser.avatar = event.target.result; // Lưu ảnh mới vào đối tượng người dùng
             // Lưu thông tin người dùng vào localStorage sau khi thay đổi avatar
             setLocalStorage("accounts", userData);
+            setLocalStorage("userLogin", userLogins);
             renderAvatar(currentUser); // Hiển thị avatar mới
-            // Sau khi cập nhật avatar, tải lại trang
           };
         
 

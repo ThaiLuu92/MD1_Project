@@ -411,6 +411,14 @@ align-items: center;
   color: white;
 }
 
+/* CSS Nội dung trong Modal */
+
+.required::before {
+  content: "*";
+  color: red;
+  margin-right: 4px;
+}
+
 
 
 
