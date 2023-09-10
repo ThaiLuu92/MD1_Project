@@ -85,12 +85,15 @@ formRegisterElement?.addEventListener("submit", (e) => {
     renderError(error);
   }
 });
+// Lấy thời gian hiện tại dưới dạng timestamp (miligiây)
+const timestamp = Date.now();
+
 
 // lấy thông tin người dùng
 
 function getUser() {
   return {
-    userId: "",
+    userId: timestamp.toString().substring(0, 10),
     userName: addUserName.value,
     email: addEmail.value.toLowerCase().trim(),
     password: addPassword.value,
@@ -103,6 +106,7 @@ function getUser() {
     address: "",
     country: "",
     avatar: "https://grn-admin.mpoint.vn/uploads/avatar-mac-dinh.png",
+    status: "active",
   };
 }
 function checkError(user) {

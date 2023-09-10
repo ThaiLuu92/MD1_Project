@@ -38,7 +38,7 @@ if (userLogins && userData && userData.length > 0) {
 
     // Function để hiển thị thông tin người dùng
     function renderUserInfo(user) {
-      userIdElement.textContent = user.userId || "Chưa cập nhật";
+      userIdElement.value = user.userId || "Chưa cập nhật";
       userEmailElement.value = user.email || "Chưa cập nhật";
       userNameElement.value = user.userName || "Chưa cập nhật";
       userBirthdayElement.value = user.birthday || "Chưa cập nhật";
