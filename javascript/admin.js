@@ -9,31 +9,33 @@ function saveUsers(users) {
 
     // Lấy danh sách người dùng từ Local Storage
     const users = getLocalStorage("accounts");
-    const tbody = document.querySelector("#userList tbody");
-    tbody.innerHTML = ""; // Xóa nội dung tbody hiện có
-  
-    let tableHTML = ""; 
-  
-    users.forEach((user, index) => {
-      tableHTML += `
-        <tr>
-          <td>${index + 1}</td>
-          <td>${user.userId}</td>
-          <td>${user.email}</td>
-          <td>${user.userName}</td>
-          <td>${user.address}</td>
-          <td>${user.status}</td>
-          <td class="btn-td">
-          <button type="button" class="btn btn-success" onclick="viewUser(${index})">Xem</button>
-          <button type="button" class="btn btn-danger" onclick="blockUser(${index})">Khóa</button>
-          </td>
-        </tr>
-      `;
-    });
-  
-    // Thêm HTML vào tbody
-    tbody.innerHTML = tableHTML;
+    function renderUserList(users) {
+      const tbody = document.querySelector("#userList tbody");
+      tbody.innerHTML = ""; // Xóa nội dung tbody hiện có
+    
+      let tableHTML = "";
+    
+      users.forEach((user, index) => {
+        tableHTML += `
+          <tr>
+            <td>${index + 1}</td>
+            <td>${user.userId}</td>
+            <td>${user.email}</td>
+            <td>${user.userName}</td>
+            <td>${user.address}</td>
+            <td>${user.status}</td>
+            <td class="btn-td">
+              <button type="button" class="btn btn-success" onclick="viewUser(${index})">Xem</button>
+              <button type="button" class="btn btn-danger" onclick="blockUser(${index})">Khóa</button>
+            </td>
+          </tr>
+        `;
+      });
+    
+      tbody.innerHTML = tableHTML;
+    }
 
+    renderUserList(users)
     // Hàm hiển thị thông tin chi tiết người dùng
     function viewUser(index) {
     const users = getLocalStorage("accounts")
@@ -76,31 +78,10 @@ function searchUser() {
     renderUserList(filteredUsers);
   }
 
-  function renderUserList(users) {
-    const tbody = document.querySelector("#userList tbody");
-    tbody.innerHTML = ""; // Xóa nội dung tbody hiện có
-  
-    let tableHTML = "";
-  
-    users.forEach((user, index) => {
-      tableHTML += `
-        <tr>
-          <td>${index + 1}</td>
-          <td>${user.userId}</td>
-          <td>${user.email}</td>
-          <td>${user.userName}</td>
-          <td>${user.address}</td>
-          <td>${user.status}</td>
-          <td class="btn-td">
-            <button type="button" class="btn btn-success" onclick="viewUser(${index})">Xem</button>
-            <button type="button" class="btn btn-danger" onclick="blockUser(${index})">Khóa</button>
-          </td>
-        </tr>
-      `;
-    });
-  
-    tbody.innerHTML = tableHTML;
-  }
+
+
+
+ 
   
 
   

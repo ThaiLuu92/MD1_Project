@@ -417,9 +417,117 @@ align-items: center;
   content: "*";
   color: red;
   margin-right: 4px;
+
+
 }
 
 
+/* CSS MODAL */
+
+.modal-content {
+  border: 10px solid #77aefb;
+  
+}
+.modal-header {
+  background-color: #77aefb;
+  border-radius: 0;
+}
+
+
+.card-course-content {
+  text-align: center;
+  border-radius: 5px;
+  border: 7px solid #77aefb;
+  margin: 0 30px;
+  overflow: hidden;
+}
+
+.card-course-title .modal-title {
+  margin: 30px 30px 0 30px;
+}
+
+.card-course-content .course-name {
+  padding: 50px 10px;
+  background-color: #77aefb;
+  font-size: 30px;
+  font-weight: 600;
+  margin: 30px 30px 0 30px;
+
+}
+
+.course-detail {
+  margin: 30px 30px 0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+
+}
+.course-detail > * {
+  font-size: 18px;
+
+}
+
+.course-discount-code {
+  display: flex;
+  margin: 30px;
+  text-align: left;
+  justify-content: space-between;
+}
+
+.course-discount-code input {
+  padding: 5px;
+  border-radius: 5px;
+  border: 0.5px solid #77aefb;
+  
+}
+
+.course-discount-code button {
+  padding: 5px 25px;
+  border: none;
+  border-radius: 7px ;
+  background-color: #77aefb;
+  color: white;
+ 
+}
+
+.total-payment {
+  border-top: 1px solid #77aefb;
+  padding-top: 30px;
+  margin: 30px;
+  display: flex;
+  justify-content: space-between;
+  color: #E9493D;
+  font-weight: 600;
+}
+
+/* .modal-body .col-7{
+  border: 5px solid #77aefb;
+  padding: 5px;
+  
+ 
+
+}
+
+.modal-body .col-5{
+  border: 5px solid #77aefb;
+  padding: 5px;
+  border-left: none;
+} */
+
+
+/* CSS BUTTON TRONG MODAL */
+
+.modal-dialog .btn-primary {
+  margin-top: 10px;
+  background-color: #77aefb;
+  border: none;
+}
+
+.modal-dialog .btn-primary:hover {
+  background-color: #2D6DB5;
+  border: none;
+}
 
 
 

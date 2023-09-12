@@ -105,6 +105,7 @@ function getUser() {
     japaneseLevel: "",
     address: "",
     country: "",
+    creditNumber: "",
     avatar: "https://grn-admin.mpoint.vn/uploads/avatar-mac-dinh.png",
     status: "active",
   };

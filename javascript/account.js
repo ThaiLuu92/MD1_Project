@@ -33,21 +33,24 @@ if (userLogins && userData && userData.length > 0) {
     );
     const userAddressElement = document.getElementById("user-address");
     const userCountryElement = document.getElementById("user-country");
+    const userCreditNumberElement = document.getElementById("user-creditNumber");
     const userAvatarElement = document.getElementById("user-avatar");
+    
     
 
     // Function để hiển thị thông tin người dùng
     function renderUserInfo(user) {
-      userIdElement.value = user.userId || "Chưa cập nhật";
-      userEmailElement.value = user.email || "Chưa cập nhật";
-      userNameElement.value = user.userName || "Chưa cập nhật";
-      userBirthdayElement.value = user.birthday || "Chưa cập nhật";
+      userIdElement.value = user.userId || "";
+      userEmailElement.value = user.email || "";
+      userNameElement.value = user.userName || "";
+      userBirthdayElement.value = user.birthday || "";
       userGenderElement.value = user.gender || "male"; // Giới tính mặc định là nam
       userAgeElement.value = user.age || "";
-      userPhoneElement.value = user.phone || "Chưa cập nhật";
-      userJapaneseLevelElement.value = user.japaneseLevel || "Chưa cập nhật";
-      userAddressElement.value = user.address || "Chưa cập nhật";
-      userCountryElement.value = user.country || "Chưa cập nhật";
+      userPhoneElement.value = user.phone || "";
+      userJapaneseLevelElement.value = user.japaneseLevel || "";
+      userAddressElement.value = user.address || "";
+      userCountryElement.value = user.country || "";
+      userCreditNumberElement.value = user.creditNumber || "";
       userAvatarElement.innerHTML = `<img src="${user.avatar ||
         "https://grn-admin.mpoint.vn/uploads/avatar-mac-dinh.png"}" alt="" id="avatar-preview">`;
     }
@@ -83,6 +86,7 @@ if (userLogins && userData && userData.length > 0) {
       userJapaneseLevelElement.removeAttribute("disabled");
       userAddressElement.removeAttribute("disabled");
       userCountryElement.removeAttribute("disabled");
+      userCreditNumberElement.removeAttribute("disabled");
 
       editButton.style.display = "none";
       saveButton.style.display = "inline";
@@ -99,6 +103,7 @@ if (userLogins && userData && userData.length > 0) {
       currentUser.japaneseLevel = userJapaneseLevelElement.value;
       currentUser.address = userAddressElement.value;
       currentUser.country = userCountryElement.value;
+      currentUser.creditNumber = userCreditNumberElement.value;
 
 
       // Lưu thông tin người dùng vào localStorage
@@ -114,6 +119,7 @@ if (userLogins && userData && userData.length > 0) {
       userJapaneseLevelElement.setAttribute("disabled", true);
       userAddressElement.setAttribute("disabled", true);
       userCountryElement.setAttribute("disabled", true);
+      userCreditNumberElement.setAttribute("disabled", true);
 
       editButton.style.display = "inline";
       saveButton.style.display = "none";
@@ -158,5 +164,7 @@ if (userLogins && userData && userData.length > 0) {
     });
   }
 }
+
+
 
 

@@ -33,7 +33,7 @@ btnLogout?.addEventListener("click", function () {
   // Tải lại trang đã đăng xuất
   // location.reload();
   // Điều hướng người dùng về trang index.html sau khi đăng xuất
-  window.location.href = "index.html"; 
+  window.location.href = "/index.html"; 
 });
 
 // Lấy phần tử avatar
