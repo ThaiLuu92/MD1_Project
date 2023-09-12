@@ -128,7 +128,7 @@ const categoryDB = [
 
 
 
-setLocalStorage("course",coursesDB)
-setLocalStorage("category",categoryDB)
+// setLocalStorage("course",coursesDB)
+// setLocalStorage("category",categoryDB)
 // setLocalStorage("accounts",accountsDB)
 

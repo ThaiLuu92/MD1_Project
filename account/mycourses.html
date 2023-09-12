@@ -60,13 +60,13 @@
 
             <ul class="header-container-right">
                 <li><a href="#">Giới thiệu</a></li>
-                <li><a href="#">Học thi JLPT</a></li>
-                <li><a href="#">Học Kaiwa</a></li>
-
-                <li><a href="#">Tiếng Nhật Business</a></li>
+                <li><a href="#">Tiếng Nhật Online</a></li>
+                <li><a href="#">Lớp Học Online</a></li>
+                <li><a href="#">Tiếng Nhật OFFLINE</a></li>
+                <li><a href="/courses.html">Danh mục khóa học</a></li>
                 <li><a href="#">Thư viện</a></li>
                 <li><a href="#">Liên hệ</a></li>
-
+            
             </ul>
         </div>
     </nav>
@@ -74,15 +74,17 @@
     <main>
         <div class="main-center container">
             <div class="main-user-left">
-                <div class="user-avatar-container">
-                    <img src="/images/watchword-img.png" alt="">
+                <div class="user-avatar-container" id="user-avatar">
+                    <img src="https://grn-admin.mpoint.vn/uploads/avatar-mac-dinh.png" alt="" id="avatar-preview">
                 </div>
-                <button class="btn-change-avatar"><i class="fa-solid fa-camera"></i>Thay đổi ảnh đại diện</button>
+                <input type="file" id="avatar-input" accept="image/*" style="display: none;">
+                <button class="btn-change-avatar" id="change-avatar-button"><i class="fa-solid fa-camera"></i> Thay đổi ảnh đại
+                    diện</button>
                 <div class="account-menu-left">
-                    <a href="/account.html"><i class="fa-solid fa-address-book"></i><span>Thông tin cá nhân</span></a>
+                    <a href="/account.html" ><i class="fa-solid fa-address-book"></i><span>Thông tin cá
+                            nhân</span></a>
                     <a href="/account/mynotification.html"><i class="fa-solid fa-bell"></i><span>Thông báo</span></a>
-                    <a href="/account/mycourses.html" class="current"><i class="fa-solid fa-bars"></i><span>Khóa học của
-                            tôi</span></a>
+                    <a href="/account/mycourses.html" class="current"><i class="fa-solid fa-bars"></i><span>Khóa học của tôi</span></a>
                     <a href="/account/myfavorite.html"><i class="fa-solid fa-heart"></i><span>Khóa học yêu
                             thích</span></a>
                     <a href="/account/myscore.html"><i class="fa-solid fa-trophy"></i><span>Sự tiến bộ của
@@ -91,7 +93,7 @@
                             toán</span></a>
                     <a href="/account/my-promotional-code.html"><i class="fa-solid fa-cart-shopping"></i><span>Nhập mã
                             khuyến mại</span></a>
-                    <a href="#"><i class="fa-solid fa-right-from-bracket"></i><span>Đăng xuất</span></a>
+                    <a href="/index.html"><i class="fa-solid fa-right-from-bracket"></i><span>Đăng xuất</span></a>
                 </div>
             </div>
             <div class="main-user-right">
@@ -103,9 +105,18 @@
                 </div>
                 <div class="bought-courses">
                     <div class=".bought-courses-container">
-                        <div class="notification-empty-container">Bạn chưa mua khóa học nào</div>
+                        <div class="notification-empty-container" style="display: none;">Bạn chưa mua khóa học nào</div>
+                       <div class="list-mycourses">
+                        <div class="mycourses-container">
+                            <div class="mycourses-card">
+                                <img src="/images/watchword-img.png" alt="">
+                            </div>
+                            <div class="mycourses-name">Khóa học N4</div>
+                        </div>
+                       </div>
 
                     </div>
+
                 </div>
                 <div class="dm-tab">
                     <a href="/courses.html">
@@ -188,5 +199,7 @@
 <script src="/utils/dataBase.js"></script>
 
 <script src="/javascript/header.js"></script>
-
+<script src="/account/account-menu-left.js"></script>
+<!-- <script src="/javascript/account.js"></script> -->
+<script src="/account/mycourses.js"></script>
 </html>
