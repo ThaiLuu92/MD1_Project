@@ -13,6 +13,17 @@ const avatarPreview = document.getElementById("avatar-preview");
 // Bắt đầu chế độ chỉnh sửa ảnh đại diện khi nút "Thay đổi ảnh đại diện" được nhấn
 
 
+// Lấy phần tử nút "Đăng xuất" và thêm sự kiện click
+const btnLogoutAcc = document.getElementById("btnLogoutAcc");
+
+btnLogoutAcc?.addEventListener("click", function () {
+  // Xóa thông tin đăng nhập khỏi LocalStorage
+  localStorage.removeItem("userLogin");
+  // Điều hướng người dùng về trang index.html sau khi đăng xuất
+  window.location.href = "/index.html";
+});
+
+
 // Lấy phần tử form
 const form = document.getElementById("form-infor");
 

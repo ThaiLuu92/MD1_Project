@@ -153,7 +153,7 @@ function searchCourse() {
 
 function getCourse() {
   return {
-    code: courseCodeElement.value,
+    code: Number(courseCodeElement.value),
     name: courseNameElement.value,
     description: courseDescriptionElement.value,
     duration: courseDurationElement.value,

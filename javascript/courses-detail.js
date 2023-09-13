@@ -243,11 +243,16 @@ confirmButtonBuy.addEventListener("click", function () {
     price_VND: courseDetail.price_VND,
     price_JPN: courseDetail.price_JPN,
     type: courseDetail.type,
+    image: courseDetail.image,
   };
 
   // Lặp qua danh sách người dùng để tìm người dùng hiện tại
   for (const account of getUserData) {
     if (account.email === getuserLogin.email) {
+      // Kiểm tra xem khóa học đã tồn tại trong myCourses của người dùng chưa
+      if (!account.myCourses) {
+      account.myCourses = []; // Tạo một mảng rỗng nếu myCourses chưa tồn tại
+      }
       // Kiểm tra xem khóa học đã tồn tại trong myCourses của người dùng chưa
       const courseExists = account.myCourses.some((existingCourse) => {
         return existingCourse.code === purchasedCourse.code;
@@ -281,7 +286,7 @@ confirmButtonBuy.addEventListener("click", function () {
     }
   }
 
-  // Sau khi thêm khóa học vào danh sách của người dùng hoặc thông báo rằng khóa học đã tồn tại, bạn có thể thực hiện các hành động khác ở đây
+  
 });
 
 

@@ -117,3 +117,14 @@
     width: 100%;
   }
 
+/* CSS nút đăng xuất */
+
+#btnLogoutAcc {
+  border: none;
+  background-color: white;
+}
+
+#btnLogoutAcc:hover {
+  color: #1474FC;
+}
+

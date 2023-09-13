@@ -72,12 +72,15 @@
     <main>
         <div class="main-center container">
             <div class="main-user-left">
-                <div class="user-avatar-container">
-                    <img src="/images/watchword-img.png" alt="">
+                <div class="user-avatar-container" id="user-avatar">
+                    <img src="https://grn-admin.mpoint.vn/uploads/avatar-mac-dinh.png" alt="" id="avatar-preview">
                 </div>
-                <button class="btn-change-avatar"><i class="fa-solid fa-camera"></i>Thay đổi ảnh đại diện</button>
+                <input type="file" id="avatar-input" accept="image/*" style="display: none;">
+                <button class="btn-change-avatar" id="change-avatar-button"><i class="fa-solid fa-camera"></i> Thay đổi ảnh đại
+                    diện</button>
                 <div class="account-menu-left">
-                    <a href="/account.html"><i class="fa-solid fa-address-book"></i><span>Thông tin cá nhân</span></a>
+                    <a href="/account.html" ><i class="fa-solid fa-address-book"></i><span>Thông tin cá
+                            nhân</span></a>
                     <a href="/account/mynotification.html"><i class="fa-solid fa-bell"></i><span>Thông báo</span></a>
                     <a href="/account/mycourses.html"><i class="fa-solid fa-bars"></i><span>Khóa học của tôi</span></a>
                     <a href="/account/myfavorite.html"><i class="fa-solid fa-heart"></i><span>Khóa học yêu
@@ -86,9 +89,9 @@
                             tôi</span></a>
                     <a href="/account/billing.html"><i class="fa-solid fa-credit-card"></i><span>Lịch sử thanh
                             toán</span></a>
-                    <a href="/account/my-promotional-code.html" class="current"><i
-                            class="fa-solid fa-cart-shopping"></i><span>Nhập mã khuyến mại</span></a>
-                    <a href="/index.html"><i class="fa-solid fa-right-from-bracket"></i><span>Đăng xuất</span></a>
+                    <a href="/account/my-promotional-code.html" class="current"><i class="fa-solid fa-cart-shopping"></i><span>Nhập mã
+                            khuyến mại</span></a>
+                    <a href="/index.html"><i class="fa-solid fa-right-from-bracket"></i><button id="btnLogoutAcc">Đăng xuất</button></a>
                 </div>
             </div>
             <div class="main-user-right">
@@ -177,6 +180,7 @@
 <script src="/utils/method.js"></script>
 <script src="/utils/dataBase.js"></script>
 
+<script src="/account/account-menu-left.js"></script>
 <script src="/javascript/header.js"></script>
 
 </html>

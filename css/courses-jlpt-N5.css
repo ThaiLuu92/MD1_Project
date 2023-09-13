@@ -178,6 +178,15 @@ width: 600px;
   border-radius: 30px;
   font-size: 18px;
   font-weight: 500;
+  box-shadow: rgba(85, 82, 82, 0.05) 5px 5px, rgba(85, 82, 82, 0.3) 10px 10px,
+    rgba(85, 82, 82, 0.2) 15px 15px, rgba(85, 82, 82, 0.1) 20px 20px,
+    rgba(85, 82, 82, 0.05) 25px 25px;
+}
+
+.board-btn-ntv:hover{
+  box-shadow: none;
+  border: 3px solid gainsboro;
+  background-color: #1b4c84;
 }
 .board-btn-buy {
   color: white;
@@ -187,6 +196,15 @@ width: 600px;
   border-radius: 30px;
   font-size: 18px;
   font-weight: 500;
+  box-shadow: rgba(85, 82, 82, 0.05) 5px 5px, rgba(85, 82, 82, 0.3) 10px 10px,
+    rgba(85, 82, 82, 0.2) 15px 15px, rgba(85, 82, 82, 0.1) 20px 20px,
+    rgba(85, 82, 82, 0.05) 25px 25px;
+}
+
+.board-btn-buy:hover {
+  box-shadow: none;
+  border: 3px solid gainsboro;
+  background-color: rgb(177, 14, 14);
 }
 
 
